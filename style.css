@@ -52,10 +52,15 @@
 }
 
 @media (max-width: 900px) {
-  #readMoreToggle {
+  .readMoreToggle {
     display: none;
+    transition: 1s;
   }
   #readMoreBtn {
     display: block;
   }
+}
+
+.toggle-active {
+  display: block;
 }
