@@ -55,6 +55,7 @@
 @media (max-width: 900px) {
   .readMoreToggle {
     display: none;
+    transition: all 1s ease;
   }
   #readMoreBtn {
     display: block;
