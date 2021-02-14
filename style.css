@@ -29,6 +29,7 @@
   justify-content: space-evenly;
   text-align: center;
   background: rgb(40, 100, 150);
+  transition: 1s;
 }
 .short-info {
   padding: 20px 0;
@@ -54,7 +55,6 @@
 @media (max-width: 900px) {
   .readMoreToggle {
     display: none;
-    transition: 1s;
   }
   #readMoreBtn {
     display: block;
