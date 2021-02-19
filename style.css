@@ -84,6 +84,7 @@ body {
 .infoInnerContainer {
   width: 80%;
   margin: auto;
+  text-align: center;
 }
 
 .infoName {
@@ -100,24 +101,17 @@ h1 {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 0.2rem;
 }
 .infoReadMore {
   display: block;
-  opacity: 0;
-  height: 0;
-  transition: height 0.5s, opacity 0.2s;
-}
-
-.infoReadMore--open {
-  display: block;
   opacity: 1;
-  height: 7rem;
+  height: auto;
 }
 
 .read_more_btn {
-  display: inline-block;
+  display: none;
   color: rgb(22, 157, 81);
   background-color: #eee;
   padding: 0.6rem 1.5rem;
@@ -136,4 +130,23 @@ br {
   color: #fff;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
+}
+
+@media (max-width: 800px) {
+  .infoReadMore {
+    display: block;
+    opacity: 0;
+    height: auto;
+    max-height: 0px;
+    /* transition: max-height 0.5s, opacity 0.2s; */
+    transition: all 0.5s;
+  }
+  .read_more_btn {
+    display: inline-block;
+  }
+  .infoReadMore--open {
+    display: block;
+    opacity: 1;
+    max-height: 1000px;
+  }
 }
